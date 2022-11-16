@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { useFetchNewsList } from '../../hooks/useFetchNews';
 
 import SpinOverlay from '../../components/commom/SpinOverlay/SpinOverlay';
@@ -10,6 +10,10 @@ const NewsPage = (props) => {
     const [slice, setSlice] = useState({ start: 0, end: 10 });
 
     const { data: newsList, isLoading } = useFetchNewsList(props.type);
+
+    useEffect(() => {
+        setSlice({ start: 0, end: 10 });
+    }, [props.type]);
 
     const handleBack = () => {
         setSlice((prev) => ({

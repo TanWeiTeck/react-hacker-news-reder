@@ -1,0 +1,6 @@
+.container {
+    @apply fixed bottom-7 right-7 rounded-full border-primary border h-10 w-10 flex items-center justify-center cursor-pointer hover:bg-secondary ease-linear duration-300;
+}
+.button {
+    @apply text-xl text-primary;
+}

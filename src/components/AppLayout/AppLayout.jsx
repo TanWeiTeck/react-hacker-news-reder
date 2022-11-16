@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { Alert } from 'antd';
 
 import Header from '../Header/Header';
+import ScrollTop from '../commom/ScrollTop/ScrollTop';
 
 const AppLayout = ({ children }) => {
     const [alert, setAlert] = useState({ show: false, message: '' });
@@ -19,6 +20,7 @@ const AppLayout = ({ children }) => {
             )}
             <Header setAlert={setAlert} />
             {children}
+            <ScrollTop />
         </>
     );
 };

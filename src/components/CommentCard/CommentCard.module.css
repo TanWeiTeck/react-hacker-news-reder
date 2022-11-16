@@ -9,7 +9,7 @@
     @apply flex gap-x-2;
 }
 .detail button {
-    @apply text-black;
+    @apply text-black z-0;
 }
 
 .nextlevel {
