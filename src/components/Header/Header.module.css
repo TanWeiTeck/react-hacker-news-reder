@@ -1,0 +1,15 @@
+.container {
+    @apply sticky top-0 bg-white bg-opacity-95 h-20 px-12 overflow-hidden  object-contain shadow-md flex items-center justify-between;
+}
+
+.navbar {
+    @apply py-3 px-5 border rounded-full flex gap-x-6 shadow-sm hover:shadow-md ease-linear duration-200 bg-white;
+}
+
+.active {
+    @apply font-bold;
+}
+
+.logo {
+    @apply h-12 w-12;
+}

@@ -1,46 +1,25 @@
-import { NavLink } from 'react-router-dom';
-import styles from './AppLayout.module.css';
+import { useState } from 'react';
+import { Alert } from 'antd';
+
+import Header from '../Header/Header';
 
 const AppLayout = ({ children }) => {
-    const navItems = [
-        { link: '/top', title: 'Top News' },
-        { link: '/new', title: 'Latest News' },
-        { link: '/comment', title: 'Commets' },
-    ];
+    const [alert, setAlert] = useState({ show: false, message: '' });
 
     return (
-        <div>
-            <header className={styles.container}>
-                <div>
-                    {/* <NavLink to={navItems[0].link}> */}
-                    <a href={navItems[0].link}>
-                        <img
-                            src="https://cdn.iconscout.com/icon/free/png-256/hackernews-2752164-2284981.png"
-                            alt="hacker_news_logo"
-                            className={styles.logo}
-                            // width={100}
-                            // heigth={100}
-                        />
-                    </a>
-                    {/* </NavLink> */}
-                </div>
-                <div className={styles.nav}>
-                    {navItems.map((navItem, index) => (
-                        <NavLink
-                            to={navItem.link}
-                            className={({ isActive }) =>
-                                isActive ? styles.active : ''
-                            }
-                            key={index}
-                        >
-                            {navItem.title}
-                        </NavLink>
-                    ))}
-                </div>
-                <div>Login</div>
-            </header>
+        <>
+            {alert.show && (
+                <Alert
+                    message={alert.message}
+                    type="warning"
+                    closable={true}
+                    afterClose={() => setAlert({ show: false, message: '' })}
+                    showIcon={true}
+                />
+            )}
+            <Header setAlert={setAlert} />
             {children}
-        </div>
+        </>
     );
 };
 

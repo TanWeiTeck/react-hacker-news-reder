@@ -1,0 +1,25 @@
+.content {
+    @apply p-3 border rounded-xl bg-stone-100 shadow-md m-1;
+}
+
+.detail {
+    @apply text-gray-400 text-xs flex justify-between items-center;
+}
+.detail div {
+    @apply flex gap-x-2;
+}
+.detail button {
+    @apply text-black;
+}
+
+.nextlevel {
+    @apply pl-6;
+}
+
+.icondown {
+    @apply rotate-0 duration-500;
+}
+
+.iconup {
+    @apply -rotate-180 duration-500;
+}

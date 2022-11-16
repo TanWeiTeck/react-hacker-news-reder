@@ -1,0 +1,7 @@
+.container {
+    @apply flex flex-col gap-y-4 m-6;
+}
+
+.commentcard {
+    @apply bg-stone-200 rounded-md p-2 shadow-lg ease-linear duration-500;
+}

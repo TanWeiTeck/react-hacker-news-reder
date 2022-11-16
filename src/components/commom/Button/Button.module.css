@@ -1,0 +1,3 @@
+.button {
+    @apply bg-primary py-2 border border-primary hover:bg-secondary disabled:cursor-not-allowed disabled:opacity-50 text-white  hover:text-primary px-9 rounded-md duration-500;
+}

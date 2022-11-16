@@ -1,3 +1,27 @@
 .cardcontainer {
-    @apply border rounded-md m-2 bg-stone-400;
+    @apply border flex rounded-md overflow-hidden my-2 mx-10 hover:bg-primary border-primary shadow-md hover:shadow-none justify-between duration-200;
+}
+
+.content {
+    @apply flex flex-col p-3 bg-white justify-between shadow-custom flex-grow;
+}
+
+.title {
+    @apply text-lg font-semibold w-fit hover:text-primary;
+}
+
+.info {
+    @apply flex flex-col justify-center items-end p-2 m-1 bg-secondary w-44 min-w-[11rem] max-w-[11rem] flex-grow text-black shadow-inner rounded-md;
+}
+
+.author {
+    @apply font-medium text-right;
+}
+
+.button {
+    @apply hover:text-primary;
+}
+
+.skeleton {
+    @apply my-2;
 }
